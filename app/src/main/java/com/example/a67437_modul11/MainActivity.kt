@@ -21,14 +21,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             _67437_Modul11Theme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+                MyApp(modifier = Modifier.fillMaxSize())
+                //Surface(
+                //    modifier = Modifier.fillMaxSize(),
+                //    color = MaterialTheme.colorScheme.background
+                //) {
+                //    Greeting("Android")
                 }
             }
         }
+    }
+}
+
+@Composable
+fun MyApp(modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier,
+        color = MaterialTheme.colorScheme.background
+    ) {
+        Greeting("Android")
     }
 }
 
@@ -46,6 +57,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     _67437_Modul11Theme {
-        Greeting("Android")
+        //Greeting("Android")
+        MyApp()
     }
 }
+
